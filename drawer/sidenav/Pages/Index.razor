@@ -4,20 +4,22 @@
 
 Welcome to your new app.
 <br />
+<br />
 <TelerikButton OnClick="@SayHelloHandler" Primary="true">Say Hello</TelerikButton>
 
 <br />
 
 @helloString
+<br />
 
-<div style="height: 2000px; width: 2000px; background: lightblue;"></div>
+<div class="index-div"></div>
 
 @code {
     MarkupString helloString;
 
     void SayHelloHandler()
     {
-        string msg = string.Format("Hello from <strong>Telerik Blazor</strong> at {0}.<br /> Now you can use C# to write front-end!", DateTime.Now);
+        string msg = string.Format("<br />Hello from <strong>Telerik Blazor</strong> at {0}.<br /> Now you can use C# to write front-end!<br />", DateTime.Now);
         helloString = new MarkupString(msg);
     }
 }
